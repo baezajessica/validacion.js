@@ -1,0 +1,134 @@
+:root {
+  --color-cream: #fdf8f1;
+  --color-cream-dark: rgb(234, 226, 208);
+  --color-green-main: #5a7247;
+  --color-green-light: rgb(122, 146, 103);
+  --color-brown: #7c6e4f;
+  --color-brown-light: #9e7e5c;
+  --color-text: #3e3e3e;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-cream);
+  line-height: 1.6;
+  padding: 20px;
+}
+.formulario-contacto .container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h2 {
+  font-family: var(--font-heading);
+  color: var(--color-green-main);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--color-cream-dark);
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--color-brown);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-cream-dark);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-green-light);
+  box-shadow: 0 0 0 2px rgba(122, 146, 103, 0.2);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.checkbox-group a {
+  color: var(--color-brown-light);
+  text-decoration: underline;
+}
+
+.btn-contacto {
+  background-color: var(--color-green-main);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-contacto:hover {
+  background-color: var(--color-green-light);
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: block;
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: #ffcdd2;
+}
+
+@media (max-width: 768px) {
+  .formulario-contacto .container {
+    padding: 20px;
+  }
+  
+  .formulario-contacto h2 {
+    font-size: 1.5rem;
+  }
+}
